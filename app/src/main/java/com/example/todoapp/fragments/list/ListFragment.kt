@@ -118,10 +118,10 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
 
     private fun restoreDeletedData(view: View, deletedItem: ToDoData) {
         val snackBar = Snackbar.make(
-            view, "Deleted '${deletedItem.title}'",
+            view, "Deletado '${deletedItem.title}'",
             Snackbar.LENGTH_LONG
         )
-        snackBar.setAction("Undo") {
+        snackBar.setAction("Desfazer") {
             mToDoViewModel.insertData(deletedItem)
         }
         snackBar.show()
@@ -155,17 +155,17 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
     // Show AlertDialog to Confirm Removal of All Items from Database Table
     private fun confirmRemoval() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes") { _, _ ->
+        builder.setPositiveButton("Sim") { _, _ ->
             mToDoViewModel.deleteAll()
             Toast.makeText(
                 requireContext(),
-                "Successfully Removed Everything!",
+                "Tudo removido com sucesso!",
                 Toast.LENGTH_SHORT
             ).show()
         }
-        builder.setNegativeButton("No") { _, _ -> }
-        builder.setTitle("Delete everything?")
-        builder.setMessage("Are you sure you want to remove everything?")
+        builder.setNegativeButton("Não") { _, _ -> }
+        builder.setTitle("Excluir tudo?")
+        builder.setMessage("Tem certeza de que deseja remover tudo?")
         builder.create().show()
     }
 
