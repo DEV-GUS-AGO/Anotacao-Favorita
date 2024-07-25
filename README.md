@@ -7,8 +7,8 @@ CRUD,
 Material 3,
 XML,
 UI Animate,
-MVVM,
-
+MVVM
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🌠 Favorite Note Project 🌠 
 
 Hi guys, how are you? This is my note-taking or notepad app, the main objective is to learn how to use operations with CRUD, UI with Material 3 and Animate UI Components.
@@ -18,5 +18,5 @@ CRUD,
 Material 3,
 XML,
 UI animation,
-MVVM,
-
+MVVM
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
